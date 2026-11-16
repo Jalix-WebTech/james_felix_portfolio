@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="dark light">
+  <title>James Felix — Software Engineer | Portfolio</title>
+  <meta name="description" content="Portfolio of James Felix, a software engineer passionate about building practical, well-crafted web software. Explore professional certifications from IBM, Microsoft, Cisco Networking Academy and Saylor Academy, technical skills and selected projects.">
+  <meta name="author" content="James Felix">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#080a09">
+
+  <!-- Open Graph / social sharing — replace YOUR-DOMAIN.example with the deployed URL -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="James Felix — Portfolio">
+  <meta property="og:title" content="James Felix — Software Engineer">
+  <meta property="og:description" content="Software engineer passionate about technology, innovation and building practical solutions. Certified by IBM, Microsoft, Cisco Networking Academy and Saylor Academy.">
+  <meta property="og:url" content="https://YOUR-DOMAIN.example/">
+  <meta property="og:image" content="assets/images/profile/james-felix-profile.jpeg">
+  <meta property="og:image:alt" content="James Felix — Software Engineer portfolio preview">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="James Felix — Software Engineer">
+  <meta name="twitter:description" content="Software engineer passionate about technology, innovation and building practical solutions.">
+  <meta name="twitter:image" content="assets/images/profile/james-felix-profile.jpeg">
+
+  <!-- Favicon (inline SVG monogram — replace with assets/icons/favicon.svg if preferred) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2310b981'/%3E%3Ctext x='32' y='42' font-family='Sora,Inter,Arial,sans-serif' font-size='28' font-weight='700' text-anchor='middle' fill='%23052e1c'%3EJF%3C/text%3E%3C/svg%3E">
+
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Sora:wght@500;600;700&display=swap">
+
+  <!-- Theme bootstrap: applies the persisted theme before first paint (prevents a flash of the wrong theme) -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('jf-theme');
+        if (t === 'light' || t === 'dark') { document.documentElement.setAttribute('data-theme', t); }
+      } catch (e) { /* storage unavailable — keep default dark theme */ }
+    })();
+  </script>
+
+  <!-- Structured data (schema.org Person) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "James Felix",
+    "jobTitle": "Software Engineer",
+    "email": "mailto:jamefelix1262002@gmail.com",
+    "url": "https://YOUR-DOMAIN.example/",
+    "sameAs": ["https://www.facebook.com/profile.php?id=61585894787080", "https://www.instagram.com/jalixtech/", "https://wa.me/2348155141240"],
+    "knowsAbout": ["JavaScript", "HTML5", "CSS3", "Responsive Web Design", "Web Accessibility"]
+  }
+  </script>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===================== Header / Navigation ===================== -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <a class="brand" href="#home" aria-label="James Felix — back to top">
+        <span class="brand__mark" aria-hidden="true">JF</span>
+        <span class="brand__text">
+          <span class="brand__name">James Felix</span>
+          <span class="brand__role">Software Engineer</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a class="nav__link" href="#home">Home</a>
+        <a class="nav__link" href="#certifications">Certifications</a>
+        <a class="nav__link" href="#skills">Skills</a>
+        <a class="nav__link" href="#projects">Projects</a>
+        <a class="nav__link" href="#about">About</a>
+        <a class="nav__link" href="#contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light mode">
+          <svg class="icon icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+          <svg class="icon icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
+        <a class="btn btn--primary btn--sm btn--contact" href="#contact"><span data-icon="mail"></span>Contact Me</a>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+          <svg class="icon icon--menu" viewBox="0 0 24 24" aria-hidden="true"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+          <svg class="icon icon--close" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+  </header>
+
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile" inert>
+    <ul class="mobile-nav__list">
+      <li><a class="mobile-nav__link" href="#home"><span>Home</span><span class="num">01</span></a></li>
+      <li><a class="mobile-nav__link" href="#certifications"><span>Certifications</span><span class="num">02</span></a></li>
+      <li><a class="mobile-nav__link" href="#skills"><span>Skills</span><span class="num">03</span></a></li>
+      <li><a class="mobile-nav__link" href="#projects"><span>Projects</span><span class="num">04</span></a></li>
+      <li><a class="mobile-nav__link" href="#about"><span>About</span><span class="num">05</span></a></li>
+      <li><a class="mobile-nav__link" href="#contact"><span>Contact</span><span class="num">06</span></a></li>
+    </ul>
+    <div class="mobile-nav__footer">
+      <div class="social-row" data-social-row></div>
+      <a class="btn btn--primary" href="#contact"><span data-icon="mail"></span>Contact Me</a>
+    </div>
+  </nav>
+
+  <main id="main">
+    <!-- ===================== HOME ===================== -->
+    <section id="home" aria-labelledby="hero-title">
+      <div class="hero">
+        <div class="hero-bg" aria-hidden="true">
+          <div class="hero-bg__grid"></div>
+          <div class="hero-bg__orb hero-bg__orb--1"></div>
+          <div class="hero-bg__orb hero-bg__orb--2"></div>
+        </div>
+        <div class="container hero__grid">
+          <div class="hero__content">
+            <div class="hero__status" id="hero-status"><span class="dot" aria-hidden="true"></span><span id="hero-status-text">Open to opportunities</span></div>
+            <p class="hero__role">Software Engineer</p>
+            <h1 class="hero__title" id="hero-title">James <span class="grad">Felix</span></h1>
+            <p class="hero__tagline">I build practical, well-crafted software for the web.</p>
+            <p class="hero__intro">I'm a software engineer passionate about technology, innovation and turning ideas into dependable, user-focused solutions. I care about clean code, accessible interfaces and continuous learning — backed by professional certifications from IBM, Microsoft, Cisco Networking Academy and Saylor Academy.</p>
+            <p class="hero__focus"><span class="hero__focus-label">Focus</span><span>Modern JavaScript · Semantic HTML &amp; CSS · Responsive, accessible UI · Software fundamentals</span></p>
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="#projects"><span data-icon="layers"></span>View My Projects<span data-icon="arrow-right" class="icon--arrow"></span></a>
+              <a class="btn btn--secondary" href="#certifications"><span data-icon="award"></span>Explore My Certifications</a>
+              <a class="btn btn--ghost" href="#contact">Contact Me<span data-icon="arrow-up-right" class="icon--up-right"></span></a>
+            </div>
+            <div class="hero__social">
+              <span class="hero__social-label">Find me on</span>
+              <div class="social-row" data-social-row></div>
+            </div>
+          </div>
+
+          <div class="hero__visual">
+            <div class="profile-wrap">
+              <div class="profile-backdrop" aria-hidden="true"></div>
+              <figure class="profile-frame" id="hero-profile">
+                <div class="profile-placeholder" role="img" aria-label="Profile photo placeholder for James Felix">
+                  <span class="profile-placeholder__mono grad" aria-hidden="true">JF</span>
+                  <span class="profile-placeholder__hint">Profile photo · add to assets/images/profile</span>
+                </div>
+              </figure>
+              <div class="float-chip float-chip--tl" aria-hidden="true"><span data-icon="badge-check"></span><div><small>Certified by</small>IBM · Microsoft · Cisco · Saylor</div></div>
+              <div class="float-chip float-chip--br" aria-hidden="true"><span data-icon="code"></span><div><small>Core stack</small>HTML · CSS · JavaScript</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats (computed from the data modules, so they are always genuine) -->
+      <section class="stats" aria-label="Portfolio at a glance">
+        <div class="container"><div class="stats__grid" id="stats-grid"></div></div>
+      </section>
+
+      <!-- Certification institutions carousel -->
+      <section class="partners" id="institutions" aria-labelledby="partners-title">
+        <div class="container"><p class="partners__label" id="partners-title">Credentials issued by</p></div>
+        <div class="marquee" id="partner-marquee">
+          <div class="marquee__track" id="marquee-track"></div>
+        </div>
+      </section>
+
+      <!-- Expertise introduction -->
+      <section class="section section--tight" aria-labelledby="expertise-title">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="eyebrow"><span data-icon="sparkles"></span>What I do</span>
+            <h2 class="section-title" id="expertise-title">Engineering with care, from idea to interface</h2>
+            <p class="section-lead">A short overview of how I work and where I add the most value.</p>
+          </div>
+          <div class="feature-grid">
+            <article class="card feature reveal">
+              <div class="feature__icon"><span data-icon="layout"></span></div>
+              <h3>Frontend engineering</h3>
+              <p>Responsive, accessible interfaces built with semantic HTML, modern CSS and vanilla JavaScript — quality shipped without unnecessary complexity.</p>
+            </article>
+            <article class="card feature reveal" style="--delay:.08s">
+              <div class="feature__icon"><span data-icon="target"></span></div>
+              <h3>Practical problem solving</h3>
+              <p>I break problems into small, testable pieces and favour simple, maintainable solutions over clever ones — the kind that still make sense a year later.</p>
+            </article>
+            <article class="card feature reveal" style="--delay:.16s">
+              <div class="feature__icon"><span data-icon="graduation-cap"></span></div>
+              <h3>Continuous learning</h3>
+              <p>Structured programmes from IBM, Microsoft, Cisco Networking Academy and Saylor Academy keep my fundamentals sharp and my toolkit current.</p>
+            </article>
+          </div>
+          <div class="core-skills reveal">
+            <span class="core-skills__label">Core technologies</span>
+            <div class="skill-cloud" id="core-skills"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Highlights: featured certifications + selected projects -->
+      <section class="section section--tight" aria-label="Highlights">
+        <div class="container highlights">
+          <article class="card hl-card reveal">
+            <div class="hl-card__head">
+              <h3><span data-icon="award"></span>Featured certifications</h3>
+              <a class="text-link" href="#certifications">View all<span data-icon="arrow-up-right"></span></a>
+            </div>
+            <ul class="hl-list" id="featured-certs"></ul>
+          </article>
+          <article class="card hl-card reveal" style="--delay:.08s">
+            <div class="hl-card__head">
+              <h3><span data-icon="layers"></span>Selected projects</h3>
+              <a class="text-link" href="#projects">View all<span data-icon="arrow-up-right"></span></a>
+            </div>
+            <ul class="hl-list" id="featured-projects"></ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- Contact CTA -->
+      <section class="section section--tight" aria-labelledby="cta-title">
+        <div class="container">
+          <div class="cta-banner reveal">
+            <div>
+              <h2 id="cta-title">Have a project in mind or a role to fill?</h2>
+              <p>I'm always glad to talk about software, collaboration and new opportunities. Send a message and I'll get back to you.</p>
+            </div>
+            <div class="cta-banner__actions">
+              <a class="btn btn--primary" href="#contact"><span data-icon="send"></span>Contact Me</a>
+              <a class="btn btn--secondary" id="cta-email" href="mailto:jamefelix1262002@gmail.com"><span data-icon="mail"></span>Email directly</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- ===================== CERTIFICATIONS ===================== -->
+    <section id="certifications" class="section section--alt" aria-labelledby="certifications-title">
+      <div class="container">
+        <div class="section-head section-head--split reveal">
+          <div>
+            <span class="eyebrow"><span data-icon="award"></span>Credentials</span>
+            <h2 class="section-title" id="certifications-title">Certifications</h2>
+            <p class="section-lead">Professional certifications from IBM, Microsoft, Cisco Networking Academy and Saylor Academy. Preview each certificate or verify it directly with the issuing institution.</p>
+          </div>
+        </div>
+        <div class="filter-bar reveal" id="cert-filters" role="group" aria-label="Filter certifications by institution"></div>
+        <div class="cert-grid" id="cert-grid">
+          <noscript><p class="empty-state">JavaScript is required to display the certification gallery.</p></noscript>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SKILLS ===================== -->
+    <section id="skills" class="section" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"><span data-icon="cpu"></span>Expertise</span>
+          <h2 class="section-title" id="skills-title">Skills &amp; technical expertise</h2>
+          <p class="section-lead">An honest map of what I work with — grouped by area, with a clear distinction between what I'm proficient in, what I have working knowledge of and what I'm currently learning.</p>
+        </div>
+        <div class="skills-legend reveal" id="skills-legend"></div>
+        <div class="skills-grid" id="skills-grid"></div>
+      </div>
+    </section>
+
+    <!-- ===================== PROJECTS ===================== -->
+    <section id="projects" class="section section--alt" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-head section-head--split reveal">
+          <div>
+            <span class="eyebrow"><span data-icon="layers"></span>Work</span>
+            <h2 class="section-title" id="projects-title">Projects</h2>
+            <p class="section-lead">A selection of things I've built — each card explains the purpose, the stack and where to see it in action.</p>
+          </div>
+        </div>
+        <div class="filter-bar reveal" id="project-filters" role="group" aria-label="Filter projects by category"></div>
+        <div class="project-grid" id="project-grid">
+          <noscript><p class="empty-state">JavaScript is required to display the project showcase.</p></noscript>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section id="about" class="section" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"><span data-icon="user"></span>About me</span>
+          <h2 class="section-title" id="about-title">The person behind the code</h2>
+          <p class="section-lead">Who I am, how I think about software and the journey so far.</p>
+        </div>
+
+        <div class="about-layout">
+          <aside class="about-aside reveal" id="about-aside" aria-label="Profile summary"></aside>
+          <div class="about-blocks" id="about-blocks"></div>
+        </div>
+
+        <div class="subsection" aria-labelledby="education-title">
+          <div class="subsection-head"><span data-icon="graduation-cap"></span><h3 id="education-title">Educational background</h3></div>
+          <div class="edu-grid" id="education-grid"></div>
+        </div>
+
+        <div class="subsection" aria-labelledby="journey-title">
+          <div class="subsection-head"><span data-icon="flag"></span><h3 id="journey-title">Professional journey</h3></div>
+          <p class="subsection-lead">Education, professional development, certifications, projects and the milestones in between.</p>
+          <ol class="timeline" id="timeline"></ol>
+        </div>
+
+        <div class="subsection" aria-labelledby="recognition-title">
+          <div class="subsection-head"><span data-icon="award"></span><h3 id="recognition-title">Recognition &amp; achievements</h3></div>
+          <p class="subsection-lead">Awards and recognitions — distinct from the certifications listed above.</p>
+          <div class="recog-grid" id="recognition-grid"></div>
+        </div>
+
+        <div class="subsection" aria-labelledby="testimonials-title">
+          <div class="subsection-head">
+            <span data-icon="message-square"></span><h3 id="testimonials-title">What people say about me</h3>
+            <span class="spacer"></span>
+            <button class="btn btn--icon" id="t-prev" type="button" aria-label="Previous testimonial"><span data-icon="chevron-left"></span></button>
+            <button class="btn btn--icon" id="t-next" type="button" aria-label="Next testimonial"><span data-icon="chevron-right"></span></button>
+          </div>
+          <div class="testimonials">
+            <div class="testimonials__track" id="testimonials-track" tabindex="0" aria-label="Testimonials carousel"></div>
+          </div>
+        </div>
+
+        <div class="subsection" aria-labelledby="hobbies-title">
+          <div class="subsection-head"><span data-icon="heart"></span><h3 id="hobbies-title">Beyond the keyboard</h3></div>
+          <p class="subsection-lead">A few things I enjoy away from the screen.</p>
+          <div class="hobbies" id="hobbies"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section id="contact" class="section section--alt" aria-labelledby="contact-title">
+      <div class="container contact-layout">
+        <div class="reveal">
+          <div class="section-head">
+            <span class="eyebrow"><span data-icon="send"></span>Contact</span>
+            <h2 class="section-title" id="contact-title">Let's build something together</h2>
+            <p class="section-lead">Whether you're a recruiter, a potential collaborator or simply want to say hello — my inbox is open. Messages sent through this form are delivered straight to my email.</p>
+          </div>
+          <ul class="contact-list" id="contact-list"></ul>
+          <div class="contact-social">
+            <span class="hero__social-label">Elsewhere</span>
+            <div class="social-row" data-social-row></div>
+          </div>
+        </div>
+
+        <div class="card form-card reveal" style="--delay:.1s">
+          <div class="form-card__head">
+            <h3>Send a message</h3>
+            <p>All fields are required. I typically reply by email.</p>
+          </div>
+          <form id="contact-form" novalidate>
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="cf-name">Full name <span class="req" aria-hidden="true">*</span></label>
+                <input class="input" id="cf-name" name="name" type="text" autocomplete="name" placeholder="Your name" required minlength="2" maxlength="100" aria-describedby="err-name">
+                <p class="form-error" id="err-name" aria-live="polite"></p>
+              </div>
+              <div class="form-field">
+                <label for="cf-email">Email address <span class="req" aria-hidden="true">*</span></label>
+                <input class="input" id="cf-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required maxlength="150" aria-describedby="err-email">
+                <p class="form-error" id="err-email" aria-live="polite"></p>
+              </div>
+              <div class="form-field form-field--full">
+                <label for="cf-subject">Subject <span class="req" aria-hidden="true">*</span></label>
+                <input class="input" id="cf-subject" name="subject" type="text" placeholder="What would you like to talk about?" required minlength="3" maxlength="150" aria-describedby="err-subject">
+                <p class="form-error" id="err-subject" aria-live="polite"></p>
+              </div>
+              <div class="form-field form-field--full">
+                <label for="cf-message">Message <span class="req" aria-hidden="true">*</span></label>
+                <textarea class="input" id="cf-message" name="message" placeholder="Tell me a little about your project, role or idea…" required minlength="10" maxlength="3000" aria-describedby="err-message"></textarea>
+                <p class="form-error" id="err-message" aria-live="polite"></p>
+              </div>
+            </div>
+            <!-- Honeypot: hidden from humans, filled by naive bots -->
+            <div class="hp-field" aria-hidden="true">
+              <label for="cf-website">Leave this field empty</label>
+              <input id="cf-website" name="website" type="text" tabindex="-1" autocomplete="off">
+            </div>
+            <div class="form-footer">
+              <button class="btn btn--primary btn--block" id="form-submit" type="submit">
+                <svg class="spinner icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
+                <span data-icon="send" class="icon--send"></span>
+                <span class="btn__label">Send Message</span>
+              </button>
+              <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+              <p class="form-note"><span data-icon="shield-check"></span><span>Delivered securely via EmailJS to <strong>jamefelix1262002@gmail.com</strong> — no email client needed. Your details are used only to reply to you.</span></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== Footer ===================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="#home" aria-label="James Felix — back to top">
+            <span class="brand__mark" aria-hidden="true">JF</span>
+            <span class="brand__text"><span class="brand__name">James Felix</span><span class="brand__role">Software Engineer</span></span>
+          </a>
+          <p>Software engineer building practical, well-crafted web software — with a focus on clean code, accessibility and continuous learning.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="#home">Home</a>
+          <a href="#certifications">Certifications</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="social-row" data-social-row></div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year">2026</span> James Felix. All rights reserved.</p>
+        <p>Built with <code>HTML</code>, <code>CSS</code> &amp; <code>JavaScript</code> — no frameworks.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="back-to-top" type="button" aria-label="Back to top"><span data-icon="arrow-up"></span></button>
+
+  <!-- Developer-only notice (shown on localhost/file:// when the email service is not configured) -->
+  <div class="dev-notice" id="dev-notice" role="note">
+    <span data-icon="info"></span>
+    <span>Contact form not connected yet — add your EmailJS keys in <code>js/config.js</code> (see README). This notice only appears on local previews.</span>
+    <button type="button" id="dev-notice-close" aria-label="Dismiss notice"><span data-icon="x"></span></button>
+  </div>
+
+  <!-- Shared detail modal (certificates & projects) -->
+  <dialog class="modal" id="detail-modal" aria-labelledby="modal-title">
+    <div class="modal__panel" id="modal-panel"></div>
+  </dialog>
+
+  <div class="sr-only" id="live-region" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- ===================== Configuration (public, client-side only) ===================== -->
+  <script src="js/config.js"></script>
+
+  <!-- =====================================================================
+       CONTENT DATA MODULES
+       Each block below mirrors a file in js/data/*.js. Content lives here —
+       never in the HTML — so it can later be served from a CMS/API.
+       Entries marked `placeholder: true` are clearly labelled in the UI and
+       should be replaced with genuine information (see docs/CONTENT_GUIDE.md).
+       ===================================================================== -->
+
+  <!-- js/data/certifications.js -->
+  <script src="js/data/certifications.js"></script>
+
+  <!-- js/data/skills.js -->
+  <script src="js/data/skills.js"></script>
+
+  <!-- js/data/projects.js -->
+  <script src="js/data/projects.js"></script>
+
+  <!-- js/data/testimonials.js -->
+  <script src="js/data/testimonials.js"></script>
+
+  <!-- js/data/recognitions.js -->
+  <script src="js/data/recognitions.js"></script>
+
+  <!-- js/data/about.js -->
+  <script src="js/data/about.js"></script>
+
+  <!-- =====================================================================
+       APPLICATION — js/main.js (+ js/components/*, js/pages/*)
+       Sections are labelled with the file they map to in a split codebase.
+       ===================================================================== -->
+  <script src="js/main.js"></script>
+</body>
+</html>
